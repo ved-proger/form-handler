@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="form">
+			<form action="#" id="form" class="form__body">
+				<h1 class="form__title">Отравка данных на почту</h1>
+				<div class="form__item">
+					<label for="formName" class="form__label">Name*</label>
+					<input type="text" id="formName" name="name" class="form__input" data-req>
+				</div>
+				<div class="form__item">
+					<label for="formEmail" class="form__label">Email*</label>
+					<input type="email" id="formEmail" name="email" class="form__input" data-req="email">
+				</div>
+				<div class="form__item">
+					<div class="form__label">do you left or right handed</div>
+					<ul class="form__options options">
+						<li class="options__item">
+							<input type="radio" checked name="hand" value="left" class="options__input" id="formLeftHended">
+							<label for="formLeftHended" class="options__label"><span class="options__text">Left hand</span></label>
+						</li>
+						<li class="options__item">
+							<input type="radio" name="hand" value="right" class="options__input" id="formRightHended">
+							<label for="formRightHended" class="options__label"> <span class="options__text">Right hand</span></label>
+						</li>
+					</ul>
+				</div>
+				<div class="form__item">
+					<label for="formMessage" class="form__label">Message</label>
+					<textarea name="message" id="formMessage"  class="form__textarea form__input"></textarea>
+				</div>
+				<div class="form__item">
+					<div class="form__label">how old are you?</div>
+					<select name="age" id="formAge">
+						<option value="from 18 to 25">i am young</option>
+						<option value="from 25 to 45">i am rown</option>
+						<option value="from 45">i am old</option>
+					</select>
+				</div>
+				<div class="form__item">
+					<div  class="form__label">add photo</div>
+					<div class="form__file file">
+						<div class="file__item">
+							<input accept=".jpg, .png, .gif" type="file" id="formFile" name="image" class="file__input">
+							<label for="formFile" class="file__button">add photo</label>
+						</div>
+						<div id="formPreview" class="file__preview"></div>
+					</div>
+				</div>
+				<div class="form__item">
+					<div class="checkbox">
+						<input type="checkbox" name="agreement" class="form__checkbox" data-req="agreement" id="formAgreement" >
+						<label for="formAgreement" class="checkbox__label">
+							<span class="checkbox__text">i consent to the processin of personal data <a href="#">terms</a></span>
+						</label>
+					</div>
+				</div>
+				<button type="submit" class="form__button">Send</button>
+			</form>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+</html>
