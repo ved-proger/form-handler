@@ -37,6 +37,14 @@ if(trim(!empty($_POST['age']))){
 	$body.= '<p><stron>Возраст</strong>'.$_POST['age'].'</p>';
 }
 
+if(trim(!empty($_POST['pl']))){
+	$body.= '<p><stron> Язык рограммирования</strong>'.$_POST['pl'].'</p>';
+}
+
+if(trim(!empty($_POST['auto']))){
+	$body.= '<p><stron>Я хочу автомобиль марки</strong>'.$_POST['auto'].'</p>';
+}
+
 if(trim(!empty($_POST['message']))){
 	$body.= '<p><stron>Сообщение</strong>'.$_POST['message'].'</p>';
 }

@@ -1,7 +1,8 @@
 "user strict"
 
 document.addEventListener('DOMContentLoaded', function(){
-	const form = document.querySelector("#form")
+	
+	const form = document.querySelector("#form");
 
 	form.addEventListener('submit', formSend)
 	
@@ -10,10 +11,20 @@ document.addEventListener('DOMContentLoaded', function(){
 
 		let error = formValidate(form);
 
+		let selectData = form.querySelectorAll(".select [name]");
+
 		let formData = new FormData(form)
 		formData.append('image', formFile.files[0])
 
+		selectData.forEach(item => {
+			formData.append(item.getAttribute("name"), item.getAttribute("value"))
+		})
 		
+		for([name, value] of formData){
+			console.log(name + "=" + value)
+
+		}
+
 		if(error === 0){
 			form.classList.add('_sending')
 			let response = await fetch('sendmail.php',{

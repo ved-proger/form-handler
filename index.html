@@ -3,14 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="components/custom-select/custom-select.css">
 	<link rel="stylesheet" href="css/style.css">
-	<title>Document</title>
+	<script>
+		document.addEventListener('DOMContentLoaded', function(){
+		  new CustomSelect('#select-1');
+		  new CustomSelect('#select-2');
+		  new CustomSelect('#select-3');
+		});
+	</script>	
+	<title>Sending data by mail</title>
 </head>
 <body>
 	<div class="wrapper">
 		<div class="form">
 			<form action="#" id="form" class="form__body">
-				<h1 class="form__title">Отравка данных на почту</h1>
+				<h1 class="form__title">Sending data by mail</h1>
 				<div class="form__item">
 					<label for="formName" class="form__label">Name*</label>
 					<input type="text" id="formName" name="name" class="form__input" data-req>
@@ -37,13 +45,58 @@
 					<textarea name="message" id="formMessage"  class="form__textarea form__input"></textarea>
 				</div>
 				<div class="form__item">
+
 					<div class="form__label">how old are you?</div>
-					<select name="age" id="formAge">
-						<option value="from 18 to 25">i am young</option>
-						<option value="from 25 to 45">i am rown</option>
-						<option value="from 45">i am old</option>
-					</select>
-				</div>
+					<div class="select" id="select-1">
+						<button type="button" class="select__toggle" name="age" value="two" data-select="toggle" data-index="1">
+						Two
+						</button>
+						<div class="select__dropdown">
+							<ul class="select__options">
+							  <li class="select__option" data-select="option" data-value="one" data-index="0">One</li>
+							  <li class="select__option select__option_selected" data-select="option" data-value="two" data-index="1">Two</li>
+							  <li class="select__option" data-select="option" data-value="three" data-index="2">Three</li>
+							  <li class="select__option" data-select="option" data-value="four" data-index="3">Four</li>
+							  <li class="select__option" data-select="option" data-value="five" data-index="4">Five</li>
+							</ul>
+						</div>
+					</div>
+        		</div>
+        		<div class="form__item">
+
+					<div class="form__label">What language do you know?</div>
+        			<div class="select" id="select-2">
+						<button  type="button" class="select__toggle" name="pl" value="js" data-select="toggle" data-index="1">
+						js
+						</button>
+						<div class="select__dropdown">
+							<ul class="select__options">
+								<li class="select__option" data-select="option" data-value="html" data-index="0">html</li>
+								<li class="select__option select__option_selected" data-select="option" data-value="ls" data-index="1">js</li>
+								<li class="select__option" data-select="option" data-value="css" data-index="2">css</li>
+								<li class="select__option" data-select="option" data-value="php" data-index="3">php</li>
+								<li class="select__option" data-select="option" data-value="pyhton" data-index="4">pyhton</li>
+							</ul>
+						</div>
+        			</div>
+        		</div>
+        		<div class="form__item">
+					<div class="form__label">what brand of car do you want?</div>
+        			<div class="select" id="select-3">
+						<button  type="button" class="select__toggle" name="auto" value="audi" data-select="toggle" data-index="1">
+						audi
+						</button>
+						<div class="select__dropdown">
+							<ul class="select__options">
+								<li class="select__option" data-select="option" data-value="reno" data-index="0">reno</li>
+								<li class="select__option select__option_selected" data-select="option" data-value="audi" data-index="1">audi</li>
+								<li class="select__option" data-select="option" data-value="skoda" data-index="2">skoda</li>
+								<li class="select__option" data-select="option" data-value="nissan" data-index="3">nissan</li>
+								<li class="select__option" data-select="option" data-value="mazda" data-index="4">mazda</li>
+							</ul>
+						</div>
+        			</div>
+        		</div>
 				<div class="form__item">
 					<div  class="form__label">add photo</div>
 					<div class="form__file file">
@@ -66,6 +119,7 @@
 			</form>
 		</div>
 	</div>
+	<script src="components/custom-select/custom-select.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
